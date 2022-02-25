@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-form-exercise/static/css/main.dec9f6b7.css",
+    "main.js": "/react-form-exercise/static/js/main.a160a4dd.js",
+    "static/media/Inter-Medium.woff": "/react-form-exercise/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/react-form-exercise/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/react-form-exercise/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/react-form-exercise/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/react-form-exercise/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/react-form-exercise/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/heart.svg": "/react-form-exercise/static/media/heart.3826c074a1b94b101e38.svg",
+    "index.html": "/react-form-exercise/index.html",
+    "static/media/trash.svg": "/react-form-exercise/static/media/trash.c4956c32989e66228de8.svg",
+    "static/media/heart-black.svg": "/react-form-exercise/static/media/heart-black.226461bd64622361ffb2.svg",
+    "static/media/close-button.svg": "/react-form-exercise/static/media/close-button.1f0b5bb9b7f510e19098.svg",
+    "static/media/edit-button.svg": "/react-form-exercise/static/media/edit-button.8667ac4a523e8fc42e59.svg",
+    "static/media/editImage.svg": "/react-form-exercise/static/media/editImage.a086f758840ae814ecde.svg",
+    "static/media/add.svg": "/react-form-exercise/static/media/add.d86bb2edc2f6eadb96b7.svg",
+    "main.dec9f6b7.css.map": "/react-form-exercise/static/css/main.dec9f6b7.css.map",
+    "main.a160a4dd.js.map": "/react-form-exercise/static/js/main.a160a4dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dec9f6b7.css",
+    "static/js/main.a160a4dd.js"
+  ]
+}
