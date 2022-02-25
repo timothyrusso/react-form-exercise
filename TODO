@@ -1,0 +1,66 @@
+import React, { useState } from 'react';
+
+const InputControlled = () => {
+
+    //UNCONTROLLED VS CONTROLLED
+    //1 gestire l'evento di change sull'input facendo in modo da cambiare il value dell'input
+    const [text, setText] = useState("")
+    const [email, setEmail] = useState("")
+    const [error, setError] = useState(null)
+
+    const handleChange = (e, type) => {
+        //event.target.value = il valore corrente dell'input + carattere nuovo 1234c
+        console.log("HO RICEVUTO:", e.target.value)
+        switch (type) {
+            case "user":
+                setText(e.target.value)
+            case "email":
+                setEmail(e.target.value)
+        }
+
+    }
+    const handeChangeEmail = (e) => {
+        //event.target.value = il valore corrente dell'input + carattere nuovo 1234c
+        console.log("HO RICEVUTO:", e.target.value)
+        setEmail(e.target.value)
+    }
+
+    // const handleBlur = (e) => {
+    //     if (!/^\d+$/.test(text)) {
+    //         setError({ ...error, errorNumber: "Ammessi solo numeri" })
+    //     } else {
+    //         setError("")
+    //     }
+    // }
+
+    //TERNARY OPERATOR cond ? questo : quest'altro
+    //&&  true && false && true               false && {email:}
+
+
+    return <>
+        <input style={{ padding: "20px", margin: "200px" }}
+            type="text"
+            name="sds"
+            onChange={(e) => handleChange(e, "user")}
+            // onBlur={handleBlur}
+            value={text} />
+        {/* {error.length > 0 ? <p>{error}</p> : null} */}
+        <input style={{ padding: "20px", margin: "200px" }}
+            type="text"
+            name="email"
+            onChange={(e) => handleChange(e, "email")}
+            // onBlur={handleBlurEmail}
+            value={email} />
+        <button disabled={false}>SALVA</button>
+    </>
+}
+
+export default InputControlled;
+
+
+//DEVI FARE UN COMPONENTE FORM (IMPORTATO DENTRO APP) CON ALMENO 3 CAMPI CON 3 VALIDAZIONI DIVERSE
+//CI DEVE ESSERE UN PULSANTE SALVA CHE PUO' ESSERE PREMUTO SOLO SE NON CI SONO ERRORI
+//QUANDO PREMO SALVA MOSTRI SULLO SCHERMO UN COUNTER DELLE VOLTE IN CUI HAI SALVATO
+//INOLTRE SUL SALVA STAMPA IN CONSOLE UN OGGETTO CONTENENTE TUTTI I CAMPI DEL FORM
+//CI DEVE ESSERE UN PULSANTE RESETTA CHE PULISCE COMPLETAMENTE IL FORM
+//CIOE' RESETTA IL COUNTER , RIMUOVE TUTTI GLI ERRORI, E SVUOTA TUTTI I CAMPI

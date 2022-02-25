@@ -12,19 +12,32 @@ function App() {
   const [saveCounter, setSaveCounter] = useState(0)
   const [showCounter, setShowCounter] = useState(false)
 
-  function handleNameCustomerChange(evt) {
+  function handleChange(evt, type) {
     checkValidity(evt)
-    setCustomerName(evt.target.value)
+    switch (type) {
+      case 'name':
+        setCustomerName(evt.target.value)
+        break
+      case 'age':
+        setCustomerAge(evt.target.value)
+        break
+      case 'avatar':
+        setLink(evt.target.value)
+        break
+      default:
+        console.log('Error, type it is not correct.')
+    }
   }
 
-  function handleNameAgeChange(evt) {
-    checkValidity(evt)
-    setCustomerAge(evt.target.value)
-  }
-
-  function handleLinkChange(evt) {
-    checkValidity(evt)
-    setLink(evt.target.value)
+  function handleBlur(evt, value) {
+    const name = evt.target.name;
+    if (value === '') {
+      setErrorMessage({})
+    } else if (!/^\d+$/.test(value)) {
+      setErrorMessage({ ...errorMessage, [name]: "Only numbers are allowed" })
+    } else {
+      setErrorMessage({})
+    }
   }
 
   function handleSubmit(evt) {
@@ -61,15 +74,16 @@ function App() {
 
   React.useEffect(() => {
     setCustomerName('');
+    setCustomerAge('');
     setLink('');
   }, []);
 
   return (
     <div className="content">
       <PopupWithForm name="add" title="New place" onSubmit={handleSubmit} formValidity={formValidity} onFormUpdate={onFormUpdate} onResetClick={handleResetForm} counter={saveCounter} turnOnCounter={showCounter}>
-        <Input type={"text"} idName={"name-input"} name={"name"} fieldName={"field_title"} placeholder={"Your Name"} minLength={"2"} maxLength={"30"} value={customerName} onChange={handleNameCustomerChange} errorMessage={errorMessage} />
-        <Input type={"number"} idName={"age-input"} name={"age"} fieldName={"field_title"} placeholder={"Your Age"} minLength={"1"} value={customerAge} onChange={handleNameAgeChange} errorMessage={errorMessage} />
-        <Input type={"url"} idName={"avatar-input"} name={"avatar"} fieldName={"field_link"} placeholder={"Avatar link"} value={link} onChange={handleLinkChange} errorMessage={errorMessage} />
+        <Input type={"text"} idName={"name-input"} name={"name"} fieldName={"field_title"} placeholder={"Your Name"} minLength={"2"} maxLength={"30"} value={customerName} onChange={handleChange} errorMessage={errorMessage} onHandleBlur={handleBlur} activateBlur={false} />
+        <Input type={"text"} idName={"age-input"} name={"age"} fieldName={"field_title"} placeholder={"Your Age"} minLength={"1"} value={customerAge} onChange={handleChange} errorMessage={errorMessage} onHandleBlur={handleBlur} activateBlur={true} />
+        <Input type={"url"} idName={"avatar-input"} name={"avatar"} fieldName={"field_link"} placeholder={"Avatar link"} value={link} onChange={handleChange} errorMessage={errorMessage} onHandleBlur={handleBlur} activateBlur={false} />
       </PopupWithForm>
     </div>
   );
