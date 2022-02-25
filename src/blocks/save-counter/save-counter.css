@@ -1,0 +1,37 @@
+.save-counter {
+  width: 100%;
+  max-width: 70px;
+  min-height: 70px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  position: absolute;
+  top: -95px;
+  left: 0px;
+  z-index: 1;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all linear 0.2s;
+}
+
+@media screen and (max-width: 552px) {
+  .save-counter {
+    max-width: 40px;
+    min-height: 40px;
+    top: -50px;
+    left: 0px;
+    font-size: 20px;
+  }
+}
