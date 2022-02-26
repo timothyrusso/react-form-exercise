@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-form-exercise/static/css/main.dec9f6b7.css",
-    "main.js": "/react-form-exercise/static/js/main.a7f70720.js",
+    "main.js": "/react-form-exercise/static/js/main.939c4cf3.js",
     "static/media/Inter-Medium.woff": "/react-form-exercise/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/react-form-exercise/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/react-form-exercise/static/media/Inter-Regular.8c206db99195777c6769.woff",
@@ -17,10 +17,10 @@
     "static/media/editImage.svg": "/react-form-exercise/static/media/editImage.a086f758840ae814ecde.svg",
     "static/media/add.svg": "/react-form-exercise/static/media/add.d86bb2edc2f6eadb96b7.svg",
     "main.dec9f6b7.css.map": "/react-form-exercise/static/css/main.dec9f6b7.css.map",
-    "main.a7f70720.js.map": "/react-form-exercise/static/js/main.a7f70720.js.map"
+    "main.939c4cf3.js.map": "/react-form-exercise/static/js/main.939c4cf3.js.map"
   },
   "entrypoints": [
     "static/css/main.dec9f6b7.css",
-    "static/js/main.a7f70720.js"
+    "static/js/main.939c4cf3.js"
   ]
 }
