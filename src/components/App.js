@@ -34,6 +34,7 @@ function App() {
     if (value === '') {
       setErrorMessage({})
     } else if (!/^\d+$/.test(value)) {
+      setFormValidity(false)
       setErrorMessage({ ...errorMessage, [name]: "Only numbers are allowed" })
     } else {
       setErrorMessage({})
